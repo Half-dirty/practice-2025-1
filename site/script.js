@@ -51,7 +51,7 @@ resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
 const logoImage = new Image();
-logoImage.src = "logo_maon_big.png";
+logoImage.src = "../site/logo_maon_big.png";
 
 const logoSize = 80;
 const spacing = logoSize * 3;
