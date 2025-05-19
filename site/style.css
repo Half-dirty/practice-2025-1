@@ -165,8 +165,8 @@ ul li {
     width: 200%;
     height: 200%;
     background-image:
-        url("logo_maon_big.png"),
-        url("logo_maon_big.png");
+        url("../site/logo_maon_big.png"),
+        url("../site/logo_maon_big.png");
     background-size: 180px 180px;
     /* Логотипы на расстоянии */
     background-position: 0 0, 90px 90px;
