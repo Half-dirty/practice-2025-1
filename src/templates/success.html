@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Резюме готово!</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="success-page">
+  <div class="bg-logos"></div>
+
+  <header class="alt-header">
+    <div class="logo-left">
+      <h1>Работа для молодых специалистов</h1>
+    </div>
+    <nav>
+      <a href="/">Главная</a>
+      <a href="career">Карьера</a>
+    </nav>
+  </header>
+
+  <main class="hero-content">
+    <h1 class="animated-title">🎉 Резюме успешно создано!</h1>
+    <p class="animated-subtitle">Вы можете скачать его и использовать при поиске работы</p>
+    <a id="downloadLink" class="button" download>📄 Скачать резюме</a>
+  </main>
+
+  <footer class="dark-footer">
+    <p>© 2025 Платформа карьерного роста студентов</p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get("file");
+    const downloadLink = document.getElementById("downloadLink");
+
+    if (file && file.startsWith("/resume/")) {
+      downloadLink.href = file;
+    } else {
+      downloadLink.textContent = "⚠️ Ссылка на резюме не найдена";
+      downloadLink.classList.remove("button");
+    }
+
+  </script>
+
+</body>
+
+</html>

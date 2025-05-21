@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Поиск работы для молодых специалистов</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="bg-logos"></div>
+
+  <header class="alt-header">
+    <div class="logo-left">
+      <h1>Работа для молодых специалистов</h1>
+    </div>
+    <nav>
+      <a href="/" class="active">Главная</a>
+      <a href="career">Карьерный старт</a>
+    </nav>
+  </header>
+  <main class="main-section">
+    <div class="hero-content">
+      <h1 class="animated-title">Найди свою первую работу</h1>
+      <p class="animated-subtitle">Создай профессиональное резюме всего за пару кликов</p>
+    </div>
+
+    <section class="resume-section">
+  <div class="resume-card">
+    <h2>Создайте ваше резюме</h2>
+    <form class="resume-form" id="resumeForm">
+      <input type="text" name="name" placeholder="ФИО" required>
+      <input type="text" name="position" placeholder="Желаемая должность" required>
+      <input type="text" name="experience" placeholder="Опыт работы" required>
+      <textarea name="skills" placeholder="Навыки (через запятую)" required></textarea>
+      <input type="text" name="education" placeholder="Образование" required>
+      <input type="text" name="email" placeholder="Контактная информация" required>
+      <button type="submit">Сгенерировать резюме</button>
+    </form>
+  </div>
+</section>
+
+
+
+  </main>
+
+  <footer class="dark-footer">
+    <p>© 2025 Платформа карьерного роста студентов</p>
+  </footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

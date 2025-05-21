@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Карьерный старт</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="bg-logos"></div>
+
+  <header class="alt-header">
+    <div class="logo-left">
+      <h1>Работа для молодых специалистов</h1>
+    </div>
+    <nav>
+      <a href="/">Главная</a>
+      <a href="career" class="active">Карьерный старт</a>
+    </nav>
+  </header>
+
+  <main class="hero-content">
+    <h1 class="animated-title">Старт карьеры</h1>
+    <p class="animated-subtitle">Где найти первую работу, как прокачать скиллы и не сойти с ума в 25 году</p>
+  </main>
+
+  <section class="info-section">
+    <div class="info-card">
+      <h2>Где искать работу?</h2>
+      <ul>
+        <li><a href="https://hh.ru" target="_blank">HeadHunter</a> — лидер рынка</li>
+        <li><a href="https://habr.com/ru/companies/" target="_blank">Habr Career</a> — для IT и гиков</li>
+        <li><a href="https://career.habr.com/students" target="_blank">Habr для студентов</a></li>
+        <li><a href="https://superjob.ru" target="_blank">SuperJob</a> — альтернатива HH</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="info-card">
+      <h2>Как составить резюме?</h2>
+      <p>
+        В резюме важно <strong>не просто перечислить</strong> опыт, а показать результат.
+        <br><br>
+        🔹 Был на практике? Напиши, что сделал.<br>
+        🔹 Знаешь HTML и CSS? Покажи проект.<br>
+        🔹 Нет опыта? Добавь pet-project или учебную задачу.
+      </p>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="info-card">
+      <h2>Прокачай навыки</h2>
+      <ul>
+        <li><a href="https://stepik.org" target="_blank">Stepik</a> — бесплатные курсы</li>
+        <li><a href="https://leetcode.com" target="_blank">LeetCode</a> — алгоритмы и задачи</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="info-card">
+      <h2>Интервью: как не слиться</h2>
+      <p>
+        ✦ Подготовься к вопросам: «Расскажи о себе», «Почему ты хочешь у нас работать?»<br>
+        ✦ Сделай ресёрч по компании<br>
+        ✦ Потренируйся с другом или в зеркало<br>
+        ✦ Верь в себя — ты не хуже других
+      </p>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="info-card">
+      <h2>Мини-игра: угадай термин</h2>
+      <p>Какое слово мы загадали?<br>Подсказка: используется для управления версиями проекта</p>
+      <input type="text" id="guessInput" placeholder="Твой ответ..." style="padding: 10px; border-radius: 8px; margin-top: 10px;">
+      <button class="button" onclick="checkAnswer()">Проверить</button>
+      <p id="gameResult" style="margin-top: 1em;"></p>
+    </div>
+  </section>
+
+  <footer class="dark-footer">
+    <p>© 2025 Платформа карьерного роста студентов</p>
+  </footer>
+
+  <canvas id="logo-canvas" style="position:fixed;top:0;left:0;z-index:-5;"></canvas>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
