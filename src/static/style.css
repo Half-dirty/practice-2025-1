@@ -1,0 +1,427 @@
+/* Обновлённая тёмная тема с цветами в стиле Яндекс.Музыки */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at center, #440066, #000000);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #f0f0f0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;  /* ⬅️ только горизонтальное скрываем */
+}
+
+
+.main-section {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: visible; /* ⬅️ НЕ нужно скрывать прокрутку */
+  box-sizing: border-box;
+}
+
+/* 🔧 Новый контейнер для главной страницы */
+.resume-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* 📦 Обновлённая карточка с резюме */
+.resume-card {
+  background-color: rgba(20, 20, 20, 0.85);
+  border-radius: 20px;
+  padding: 40px 60px;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 0 30px rgba(255, 0, 204, 0.2);
+  border: 1px solid #440066;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* 📄 Сама форма — сетка */
+.resume-card .resume-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;
+  width: 100%;
+}
+
+.resume-form input,
+.resume-form textarea {
+  padding: 14px 18px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.resume-form textarea {
+  grid-column: span 2;
+  min-height: 80px;
+  resize: vertical;
+}
+
+.resume-form button {
+  grid-column: span 2;
+  justify-self: center;
+  background: #ff00cc;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 32px;
+  font-size: 18px;
+  box-shadow: 0 0 15px #ff00cc;
+  transition: 0.3s;
+}
+
+.resume-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff00cc;
+}
+
+/* 📱 Мобильная адаптация */
+@media (max-width: 768px) {
+  .resume-card .resume-form {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+
+
+
+
+header.alt-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #0e0e1a;
+    color: #ffffff;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    text-align: center;
+    padding: 140px 20px 40px; /* 🔼 уменьшили верхний и нижний отступ */
+    color: #ffffff;
+}
+
+body.success-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+body.success-page main {
+  flex: 1;
+}
+
+
+
+
+header.alt-header h1 {
+    font-size: 2rem;
+    /* 🔻 раньше 1.8rem */
+    margin: 0;
+}
+
+nav a {
+    color: #bbbbbb;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #ff00cc;
+}
+
+/* Стиль для активной страницы */
+nav a.active {
+    color: #ff00cc;
+    font-weight: bold;
+    /* Выделение активной ссылки */
+}
+
+.hero-content {
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.hero-content p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto 1.5em;
+    color: #dddddd;
+}
+
+.button {
+    padding: 12px 24px;
+    background-color: #ff00cc;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 0, 204, 0.4);
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 0, 204, 0.6);
+}
+
+.page-heading h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 40px;
+}
+
+.team-card {
+    background-color: #1a1a2e;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border: 1px solid #3a3a5a;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(255, 0, 204, 0.2);
+}
+
+.timeline-entry {
+    padding: 20px 40px;
+    border-left: 4px solid #ff00cc;
+    margin-left: 20px;
+    background-color: #121212;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(255, 0, 204, 0.1);
+}
+
+.dark-footer {
+    background-color: #0a0a0a;
+    color: #888;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.9rem;
+}
+
+ul {
+    padding-left: 20px;
+    list-style: disc;
+    color: #ddd;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+}
+
+.bg-logos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-image:
+        url("/static/images/logo_maon_big.png"),
+        url("/static/images/logo_maon_big.png");
+    background-size: 180px 180px;
+    /* Логотипы на расстоянии */
+    background-position: 0 0, 90px 90px;
+    /* Смещение второго слоя */
+    background-repeat: repeat;
+    z-index: -1;
+    opacity: 0.08;
+    animation: scroll-logos 10s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes scroll-logos {
+    0% {
+        background-position: 0 0, 90px 90px;
+    }
+
+    100% {
+        background-position: 720px 720px, 810px 810px;
+    }
+}
+
+
+
+
+.logo {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+/* Контейнер карточек */
+.info-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.info-card {
+  position: relative;
+  background-color: rgba(20, 20, 20, 0.85);
+  color: #f0f0f0;
+  border-radius: 16px;
+  padding: 24px 32px;
+  max-width: 800px;
+  width: 100%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  border: 1px solid #440066;
+  box-shadow: 0 0 8px rgba(255, 0, 204, 0.1);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+
+.info-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 0, 204, 0.3);
+  border-color: #ff00cc;
+}
+
+
+/* Чередование сторон */
+.info-section:nth-child(even) {
+    justify-content: flex-start;
+}
+
+.info-section:nth-child(odd) {
+    justify-content: flex-end;
+}
+
+.info-card a {
+  color: #ff66ff; /* Яркий фиолетовый — можно заменить на другой */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.info-card a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.info-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+.info-section {
+    overflow: visible;
+    border-radius: 16px;
+}
+/* 💠 Карточки на главной странице */
+.home-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 60px 20px;
+}
+
+.home-card {
+  position: relative;
+  background-color: rgba(20, 20, 20, 0.85); /* как у info-card */
+  color: #f0f0f0;
+  border-radius: 16px;
+  padding: 24px 32px;
+  width: 320px;
+  font-size: 1rem;
+  line-height: 1.6;
+  border: 1px solid #440066;
+  box-shadow: 0 0 8px rgba(255, 0, 204, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.info-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 0, 204, 0.3);
+  border-color: #ff00cc;
+}
+
+.home-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 0, 204, 0.3);
+  border-color: #ff00cc;
+}
+
+
+.home-card h2 {
+  font-size: 1.5rem;
+  color: #ffffff; /* белый заголовок */
+  margin-bottom: 16px;
+}
+
+.home-card p {
+  margin: 0;
+}
