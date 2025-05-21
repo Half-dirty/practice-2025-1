@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Руководство по запуску</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="bg-logos"></div>
+
+    <header class="alt-header">
+        <div class="logo-left">
+            <h1>ЦНИИ РЖЯ</h1>
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html">О проекте</a>
+            <a href="team.html">Участники</a>
+            <a href="log.html">Журнал</a>
+            <a href="resources.html">Ресурсы</a>
+            <a href="variant.html">Вариативная часть</a>
+        </nav>
+    </header>
+
+    <main class="hero-content">
+        <h1 class="animated-title">Руководство по запуску</h1>
+        <p class="animated-subtitle">Пошаговая инструкция по установке и использованию проекта Resume Creator</p>
+    </main>
+
+    <section class="info-section">
+        <div class="info-card">
+            <h2>Установка и запуск</h2>
+            <ol>
+                <li>Установите Python (если Python ещё не установлен на вашем компьютере).</li>
+                <li>Скачайте или клонируйте репозиторий с исходным кодом проекта <strong>Resume Creator</strong>.</li>
+                <li>Откройте консоль в папке с проектом и выполните команды по установке необходимых библиотек (включая Flask и pdfkit).</li>
+                <li>Дополнительно установите <strong>wkhtmltopdf</strong> — внешнюю утилиту для генерации PDF. Она требуется библиотеке pdfkit. Скачать можно с <a href="https://wkhtmltopdf.org/downloads.html" target="_blank">официального сайта</a>. После установки убедитесь, что путь к её исполняемому файлу прописан в коде (в файле <code>main.py</code>, параметр <code>configuration = pdfkit.configuration(...)</code>).</li>
+                <li>Запустите приложение командой <code>python main.py</code>. Сервер будет доступен по адресу <code>http://localhost:5000</code>.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-card">
+            <h2>Создание резюме</h2>
+            <p>
+                Откройте в браузере страницу <code>http://localhost:5000</code>.
+                В открывшемся веб-интерфейсе заполните все необходимые поля резюме: личные данные, образование, опыт
+                работы, навыки и т.д.
+                После этого нажмите кнопку создания резюме.
+                Приложение сформирует PDF-файл с вашим резюме, готовый к сохранению или печати.
+            </p>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-card">
+            <h2>Документы вариативной части</h2>
+            <ul>
+                <li><a href="https://github.com/Half-dirty/practice-2025-1/blob/master/docs/description_for_optional_part.md"
+                        target="_blank">Полное техническое описание</a></li>
+                <li><a href="https://github.com/Half-dirty/practice-2025-1/blob/master/docs/guide_for_optional_part.md"
+                        target="_blank">Пошаговое руководство с примерами</a></li>
+                <li><a href="https://github.com/Half-dirty/practice-2025-1/blob/master/reports/report_for_optional_part.md"
+                        target="_blank">Итоговый отчёт по вариативной части</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="dark-footer">
+        <p>© 2025 ЦНИИ РЖЯ и Московский Политех | Разработка: студенты проекта</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
