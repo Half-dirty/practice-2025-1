@@ -31,6 +31,12 @@
 - Написание вспомогательного скрипта запуска сервера через `.bat` с автоочисткой порта;
 - Обработка ошибок и логирование.
 
+### Документация проекта
+
+- [Полное техническое описание (description_for_optional_part.md)](https://github.com/Half-dirty/practice-2025-1/blob/master/docs/description_for_optional_part.md)
+- [Пошаговое руководство с примерами (guide_for_optional_part.md)](https://github.com/Half-dirty/practice-2025-1/blob/master/docs/guide_for_optional_part.md)
+- [Итоговый отчёт по вариативной части (report_for_optional_part.md)](https://github.com/Half-dirty/practice-2025-1/blob/master/reports/report_for_optional_part.md)
+
 ## Ответственный по проектной (учебной) практике
 
 Чернова Вера Михайловна, кафедра информационных технологий.
