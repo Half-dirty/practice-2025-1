@@ -48,7 +48,7 @@
 
 ---
 
-### Вариативная часть — проект [`Resume Creator`](https://github.com/Half-dirty/practice-2025-1/tree/master/docs/)
+### Вариативная часть — проект **Resume Creator**
 
 В рамках индивидуального задания по вариативной части был реализован проект **Resume Creator** — веб-приложение для генерации PDF-резюме. Основой послужила статья [Creating a simple web server using Python (João Ventura, 2017)](https://joaoventura.net/blog/2017/python-webserver/), дополненная собственной архитектурой на Flask и современным интерфейсом.
 
