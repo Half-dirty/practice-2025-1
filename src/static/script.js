@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 🎯 Плавное появление карточек
   const cards = document.querySelectorAll(".team-card, .timeline-entry, .info-card");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(card);
   });
 
-  // 💡 Наведение на карточки (визуальный эффект)
   document.querySelectorAll(".team-card").forEach(card => {
     card.addEventListener("mouseenter", () => {
       card.style.boxShadow = "0 12px 24px rgba(0, 0, 0, 0.15)";
@@ -24,14 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 📌 Подсветка активной ссылки в навигации
   const currentPath = window.location.pathname.split('/').pop();
   document.querySelectorAll('nav a').forEach(link => {
     const linkPath = link.getAttribute('href').split('/').pop();
     if (linkPath === currentPath) link.classList.add('active');
   });
 
-  // 🧠 Мини-игра: угадай слово
   const guessInput = document.getElementById('guessInput');
   if (guessInput) {
     const gameResult = document.getElementById('gameResult');
@@ -47,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Отправка по Enter
     guessInput.addEventListener('keydown', e => {
       if (e.key === 'Enter') {
         e.preventDefault();
@@ -55,14 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Кнопка тоже вызывает проверку
     const guessButton = document.querySelector('.button');
     if (guessButton) {
       guessButton.addEventListener('click', checkAnswer);
     }
   }
 
-  // 📝 Обработка формы резюме
   const resumeForm = document.getElementById("resumeForm");
   if (resumeForm) {
     resumeForm.addEventListener("submit", function (e) {
