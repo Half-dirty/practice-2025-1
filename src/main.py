@@ -8,7 +8,7 @@ logging.basicConfig(filename='error.log', level=logging.ERROR, encoding='utf-8')
 
 app = Flask(__name__)
 RESUME_DIR = os.path.join('static', 'resumes')
-os.makedirs(RESUME_DIR, exist_ok=True)  # создаём папку, если не существует
+os.makedirs(RESUME_DIR, exist_ok=True) 
 
 @app.route('/')
 def home():
@@ -37,19 +37,17 @@ def generate():
             'position': request.form['position'],
             'education': request.form['education'],
             'skills': request.form['skills'],
-            'experience': request.form.get('experience', '')  # если есть это поле
+            'experience': request.form.get('experience', '')
         }
 
         filename = f"resume_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
         filepath = os.path.join(RESUME_DIR, filename)
 
-        # Конфигурация wkhtmltopdf
         config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
 
         rendered = render_template('resume_template.html', **data)
         pdfkit.from_string(rendered, filepath, configuration=config)
 
-        # Возвращаем JSON с путём к файлу
         return jsonify({
             "success": True,
             "fileUrl": url_for('download_resume', filename=filename)
