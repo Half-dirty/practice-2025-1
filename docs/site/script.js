@@ -1,9 +1,6 @@
-// script.js — плавные эффекты и фоновая анимация без мыши
-
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".team-card, .timeline-entry, .info-card");
 
-  // Плавное появление при скролле
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -13,11 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.1 });
 
   cards.forEach(card => {
-    card.classList.remove("visible"); // сброс
+    card.classList.remove("visible"); 
     observer.observe(card);
   });
 
-  // Подсветка карточек по наведению (дополнительно к CSS)
   const hoverCards = document.querySelectorAll(".team-card");
   hoverCards.forEach(card => {
     card.addEventListener("mouseenter", () => {
@@ -30,15 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Подсветка активной ссылки
   const currentPath = window.location.pathname.split('/').pop();
   document.querySelectorAll('nav a').forEach(link => {
     const linkPath = link.getAttribute('href').split('/').pop();
     if (linkPath === currentPath) link.classList.add('active');
   });
 });
-
-// ==== CANVAS ЛОГОТИПЫ ====
 
 const canvas = document.getElementById("logo-canvas");
 const ctx = canvas.getContext("2d");
@@ -81,7 +74,6 @@ function spawnLogoRow() {
     });
   }
 
-  // Ограничим количество одновременно активных логотипов
   if (logos.length > 50) {
     logos.splice(0, logos.length - 50);
   }
@@ -104,6 +96,6 @@ function animateLogos() {
 
 logoImage.onload = () => {
   spawnLogoRow();
-  setInterval(spawnLogoRow, 1000); // реже — раз в 2 сек
+  setInterval(spawnLogoRow, 1000); 
   requestAnimationFrame(animateLogos);
 };
