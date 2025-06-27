@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function checkAnswer() {
       const val = guessInput.value.trim().toLowerCase();
       if (val === 'git') {
-        gameResult.textContent = '✅ Верно! Без Git-а в проде никуда.';
+        gameResult.textContent = 'Верно! Без Git-а в проде никуда.';
         gameResult.style.color = '#00ff99';
       } else {
-        gameResult.textContent = '❌ Не угадал. Попробуй снова.';
+        gameResult.textContent = 'Не угадал. Попробуй снова.';
         gameResult.style.color = '#ff6666';
       }
     }
